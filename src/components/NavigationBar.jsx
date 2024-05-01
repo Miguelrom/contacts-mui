@@ -15,7 +15,7 @@ export default function NavigationBar() {
   }
 
   return (
-      <AppBar position="static" sx={{ backgroundColor: 'white'}}>
+      <AppBar position="sticky" sx={{ backgroundColor: 'white' }}>
         <Toolbar sx={{  }}>
           <Tabs value={selectedTab} onChange={handleTabChange} >
             <Tab label='Home' value='/' component={Link} to='' />
