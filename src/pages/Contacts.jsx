@@ -1,6 +1,8 @@
+import ContactsTable from "../components/ContactsTable";
 
 export default function Contacts() {
   return (
-    <h1>Contacts page</h1>
+    <ContactsTable />
   );
 }
+
