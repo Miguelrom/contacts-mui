@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
@@ -26,6 +27,8 @@ export default function ContactsTable() {
 
 	const [response, setResponse] = useState(null);
 	const [offset, setOffset] = useState(0);
+
+  const navigate = useNavigate();
 
 	useEffect(() => {
 
@@ -66,8 +69,10 @@ export default function ContactsTable() {
             {response ? (
               response.results.map((row) => (
                 <TableRow
-                  key={row.name}
-                  sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+                  key={row._id}
+                  sx={{ "&:last-child td, &:last-child th": { border: 0 }, cursor: 'pointer' }}
+                  hover
+                  onClick={() => navigate(row._id) }
                 >
                   <TableCell component="th" scope="row">
                     {row.name}

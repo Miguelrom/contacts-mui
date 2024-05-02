@@ -7,6 +7,8 @@ import About from "./pages/About";
 import NewContact from "./pages/NewContact";
 import Error from "./pages/Error";
 import ContactForm from "./components/ContactForm";
+import ContactDetail from "./pages/ContactDetail";
+import ContactEdit from "./pages/ContactEdit";
 
 const router = createBrowserRouter([
   {
@@ -23,6 +25,20 @@ const router = createBrowserRouter([
         {
           index: true,
           element: <Contacts />
+        },
+        {
+          path: ':contactId',
+          children: [
+            {
+              index: true,
+              element: <ContactDetail />,
+              loader: ContactDetail.loader,
+            },
+            {
+              path: 'edit',
+              element: <ContactEdit />
+            }
+          ]
         },
         {
           path: 'new',
