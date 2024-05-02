@@ -4,19 +4,32 @@ import { CssBaseline } from "@mui/material";
 import Home from "./pages/Home";
 import Contacts from "./pages/Contacts";
 import About from "./pages/About";
+import NewContact from "./pages/NewContact";
+import Error from "./pages/Error";
+import ContactForm from "./components/ContactForm";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
-    errorElement: <p>Some error occurred...</p>,
+    errorElement: <Error />,
     children: [{
       index: true,
       element: <Home />,
     },
     {
       path: 'contacts',
-      element: <Contacts />,
+      children: [
+        {
+          index: true,
+          element: <Contacts />
+        },
+        {
+          path: 'new',
+          element: <NewContact />,
+          action: ContactForm.action,
+        }
+      ]
     },
     {
       path: 'about',
