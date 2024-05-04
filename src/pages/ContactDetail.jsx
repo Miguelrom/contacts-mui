@@ -1,9 +1,9 @@
-import { useLoaderData, defer } from "react-router-dom";
+import { useRouteLoaderData, defer } from "react-router-dom";
 import ContactItem from "../components/ContactItem";
 
 export default function ContactDetail() {
 
-  const contact = useLoaderData();
+  const contact = useRouteLoaderData('contact-detail');
 
   return (
     <ContactItem contact={contact} />

@@ -28,11 +28,12 @@ const router = createBrowserRouter([
         },
         {
           path: ':contactId',
+          id: 'contact-detail',
+          loader: ContactDetail.loader,
           children: [
             {
               index: true,
               element: <ContactDetail />,
-              loader: ContactDetail.loader,
             },
             {
               path: 'edit',

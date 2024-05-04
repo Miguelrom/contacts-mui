@@ -1,7 +1,11 @@
+import { useNavigate } from "react-router-dom";
 import { Edit as EditIcon, Delete as DeleteIcon } from "@mui/icons-material";
 import { Paper, Stack, Typography, Box, Button } from "@mui/material";
 
 export default function ContactItem({ contact }) {
+
+  const navigate = useNavigate();
+
   return (
     <Paper elevation={5} sx={{ maxWidth: 600, margin: "0 auto", padding: 5 }}>
       <Stack spacing={2} sx={{ marginBottom: 2 }}>
@@ -32,6 +36,7 @@ export default function ContactItem({ contact }) {
             variant="contained"
             startIcon={ <EditIcon /> }
             size="large"
+            onClick={() => navigate('edit')}
           >
             Edit
           </Button>
