@@ -6,9 +6,9 @@ import Contacts from "./pages/Contacts";
 import About from "./pages/About";
 import NewContact from "./pages/NewContact";
 import Error from "./pages/Error";
-import ContactForm from "./components/ContactForm";
 import ContactDetail from "./pages/ContactDetail";
 import ContactEdit from "./pages/ContactEdit";
+import contactFormAction from "./actions/contactFormAction";
 
 const router = createBrowserRouter([
   {
@@ -37,14 +37,15 @@ const router = createBrowserRouter([
             },
             {
               path: 'edit',
-              element: <ContactEdit />
+              element: <ContactEdit />,
+              action: contactFormAction,
             }
           ]
         },
         {
           path: 'new',
           element: <NewContact />,
-          action: ContactForm.action,
+          action: contactFormAction,
         }
       ]
     },

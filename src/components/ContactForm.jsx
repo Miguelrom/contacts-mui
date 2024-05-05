@@ -1,5 +1,5 @@
 import { useState, useRef } from "react";
-import { Form, redirect } from "react-router-dom";
+import { Form } from "react-router-dom";
 import validator from "validator";
 import { TextField, Stack, Box, Paper, Button, Typography } from "@mui/material";
 import SaveIcon from '@mui/icons-material/Save';
@@ -144,34 +144,4 @@ export default function ContactForm( { title = 'New contact',  method = 'POST', 
       </Form>
     </Paper>
   );
-}
-
-ContactForm.action = async ({ request }) => {
-
-  const data = await request.formData();
-
-  const contactData = {
-    name: data.get('name'),
-    lastName: data.get('lastName'),
-    email: data.get('email'),
-    phoneNumber: data.get('phoneNumber'),
-    company: data.get('company'),
-  }
-
-  console.log('contactData', contactData)
-
-  const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/contacts`, {
-    method: request.method,
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(contactData),
-  });
-
-  if (!response.ok) {
-    throw new Error({ message: 'Could not save contact.' }, { status: 500 });
-  }
-
-  return redirect('/contacts');
-
 }
