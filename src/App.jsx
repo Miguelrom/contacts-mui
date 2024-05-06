@@ -9,6 +9,7 @@ import Error from "./pages/Error";
 import ContactDetail from "./pages/ContactDetail";
 import ContactEdit from "./pages/ContactEdit";
 import contactFormAction from "./actions/contactFormAction";
+import deleteContactAction from "./actions/deleteContactAction";
 
 const router = createBrowserRouter([
   {
@@ -34,6 +35,7 @@ const router = createBrowserRouter([
             {
               index: true,
               element: <ContactDetail />,
+              action: deleteContactAction,
             },
             {
               path: 'edit',
