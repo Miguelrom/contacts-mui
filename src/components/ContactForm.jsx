@@ -6,7 +6,7 @@ import SaveIcon from '@mui/icons-material/Save';
 
 // This regex checks the validity of the phoneNumber field. 
 // It tests true for empty or 10-digit strings.
-export const validPhoneNumberRegex = /^$|^\d{10}$/;
+const validPhoneNumberRegex = /^$|^\d{10}$/;
 
 export default function ContactForm( { title = 'New contact',  method = 'POST', contact =  {
   name: '',
