@@ -21,7 +21,7 @@ export default function Instructions() {
         </li>
         <li>
           To create a new contact go to the Contacts menu option and click on
-          the New button.
+          the NEW button.
         </li>
       </Box>
     </Box>

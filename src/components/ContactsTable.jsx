@@ -89,7 +89,7 @@ export default function ContactsTable() {
         </Table>
       </TableContainer>
       <TablePagination
-        sx={{ width: 940, margin: "0 auto" }}
+        sx={{ width: 940, mx: "auto", marginBottom: 5 }}
         component="div"
         rowsPerPageOptions={[LIMIT]}
         rowsPerPage={LIMIT} // limit

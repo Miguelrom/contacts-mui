@@ -7,7 +7,7 @@ import Instructions from "../components/Instructions";
 export default function Home() {
   return (
     <>
-      <Typography align="center" variant="h3" component="h1" sx={{ marginBottom: 10 }} >
+      <Typography align="center" variant="h4" component="h1" sx={{ marginBottom: 10 }} >
         Welcome to your Contacts!
       </Typography>
       <Box sx={{ display: 'flex', justifyContent: 'space-between', maxWidth: 500, marginBottom: 10, mx: 'auto'}} >
