@@ -17,7 +17,7 @@ export default function ProjectDescription() {
         <Typography variant="h6" component="h4" >Repository</Typography>
         <Typography component="p" sx={{ paddingLeft: 2, fontSize: 16 }}>
           The front end can be found at the following public <Link href="https://github.com/Miguelrom/contacts-mui" target="_blank" >GitHub repo</Link>. <br />
-          The back end can be found at the following public <Link href="https://github.com/Miguelrom/contacts-api" target="_blank" >GitHub repo</Link>.
+          The back end can be found at the following public <Link href="https://github.com/Miguelrom/contacts-api-two" target="_blank" >GitHub repo</Link>.
         </Typography>
         <Typography variant="h6" component="h4" >Author</Typography>
         <Typography component="p" sx={{ paddingLeft: 2, fontSize: 16 }} >
