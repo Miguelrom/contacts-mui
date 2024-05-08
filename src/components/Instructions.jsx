@@ -23,6 +23,9 @@ export default function Instructions() {
           To create a new contact go to the Contacts menu option and click on
           the NEW button.
         </li>
+        <li>
+          <strong>*NOTE:</strong> the contacts list might take a few seconds to load the first time since the web service is hosted on a free account.<span>&#128513;</span>
+        </li>
       </Box>
     </Box>
   );
