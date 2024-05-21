@@ -11,7 +11,7 @@ export default function ProjectDescription() {
           This project was built with <Link href="https://react.dev/" target="_blank">ReactJS</Link> and <Link href="https://mui.com/" target="_blank">MUI</Link> libraries 
           on the front end, and <Link href="https://expressjs.com/" target="_blank">ExpressJS</Link> and <Link href="https://www.mongodb.com/" target="_blank">MongoDB</Link> on 
           the back end. <br />
-          The main purpose of this web application is to serve an exercise to better my skills as a fullstack software developer using JavaScript. <br />
+          The main purpose of this web application is to serve as an exercise to better my skills as a fullstack software developer using JavaScript. <br />
           Another goal is to have some project to show in my resume for my potential employers where they can see what I&apos;m capable of.
         </Typography>
         <Typography variant="h6" component="h4" >Repository</Typography>
